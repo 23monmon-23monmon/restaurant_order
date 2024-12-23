@@ -10,6 +10,7 @@ const Login = () => {
        
         if(values.password === "admin@1234" && values.username === "admin@gmail.com")
         {
+            sessionStorage.setItem('role', 'admin');
             navigate('/admin_dashboard');
         }
         else
