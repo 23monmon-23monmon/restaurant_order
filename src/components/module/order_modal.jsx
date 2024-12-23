@@ -27,7 +27,7 @@ const OrderModal = (props) => {
                 setOnErrorCheck("") 
             }
             else {
-                setOnErrorCheck("Please Enter a phone number");
+                setOnErrorCheck("Invalid Phone Number");
                 setBackgroundCheck(false)
             }
              

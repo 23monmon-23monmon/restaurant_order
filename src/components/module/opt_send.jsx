@@ -58,6 +58,7 @@ const OptSend = () => {
     const getGenerateOtp = () => {
         const otp = Math.floor(100000 + Math.random() * 900000).toString();
         setGenerateOtp(otp);
+        alert("Your OTP is " + otp);
     }
 
     const handleResend = () => {

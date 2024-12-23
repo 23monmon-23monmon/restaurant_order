@@ -16,9 +16,8 @@ const CommonLayout = () => {
         <>
             <div className="flex justify-between bg-[red] pt-3 pb-3 px-2">
                 <div onClick={backAction}> <ArrowLeftOutlined style={{color : 'white', fontSize : '20px'}} /> </div>
-                <div style={{color : 'white'}}> <Link to='/'>Menu</Link></div>
-                <div style={{color : 'white'}} > <Link to='login'>Login</Link>  </div>
-                    
+                <div style={{color : 'white', textDecoration: location.pathname === '/' ? 'underline' : ''}} > <Link to='/'>Menu</Link></div>
+                <div style={{color : 'white',textDecoration: location.pathname === '/login' ? 'underline' : ''}} > <Link to='login'>Login</Link>  </div>
             </div>
             <Outlet />
             </>
