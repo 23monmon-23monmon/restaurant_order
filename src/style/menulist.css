@@ -1,0 +1,10 @@
+.ordercard {
+    border-radius: 7px;
+    border:  1px solid black;
+}
+
+.orderactivecard {
+    border-radius: 7px;
+    border:  2px solid red;
+}
+
