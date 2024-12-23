@@ -56,15 +56,15 @@ const MenuList = () => {
                             </div>
                             <div className="col-span-4 flex justify-end">
                                 {/* <image src='/logo/yogurt.png' alt="Passion" width="100%" /> */}
-                                <img src="/logo/passionyogurt.png" alt="Example" width="70%" height="50%" />
+                                <img src="/logo/passionyogurt.png" alt="Example" width="50%" height="20%" />
                             </div>
                             
+                        </div>
+                        <div className="pt-1 flex justify-end pb-2">
+                            <button style={{background : 'red', color: 'white', width : '120px', minWidth: '100px', borderRadius: '30px', padding : '2px 0px 4px 0px'}} onClick={openModal}>ORDER NOW</button>
+                        </div>
+                        <hr />
                     </div>
-                    <div className="pt-1 flex justify-end pb-2">
-                        <button style={{background : 'red', color: 'white', width : '120px', minWidth: '100px', borderRadius: '30px', padding : '2px 0px 4px 0px'}} onClick={openModal}>ORDER NOW</button>
-                    </div>
-                    <hr />
-            </div>
                 </>)
             }
         </>
@@ -81,12 +81,14 @@ const menuList = [
             {
                 itemName : "Passion Yogurt",
                 itemPrice : 5000,
-                note : 'Natural fermented yogurt from pure fresh milk and passion fruit'
+                note : 'Natural fermented yogurt from pure fresh milk and passion fruit',
+                imgsrc : '/logo/passionyogurt.png'
             },
             {
                 itemName : "OrangeYogurt Yogurt",
                 itemPrice : 5000,
-                note : 'Natural fermented yogurt from pure fresh milk and passion fruit'
+                note : 'Natural fermented yogurt from pure fresh milk and passion fruit',
+                imgsrc : '/logo/passionyogurt.png'
             }
         ]
     },
@@ -97,12 +99,14 @@ const menuList = [
             {
                 itemName : "Chocolet Bubble",
                 itemPrice : 5000,
-                note : 'Natural fermented yogurt from pure fresh milk and passion fruit'
+                note : 'Natural fermented yogurt from pure fresh milk and passion fruit',
+                imgsrc : '/logo/chocolatebubble.png'
             },
             {
                 itemName : "Bubble ",
                 itemPrice : 5000,
-                note : 'Natural fermented yogurt from pure fresh milk and passion fruit'
+                note : 'Natural fermented yogurt from pure fresh milk and passion fruit',
+                imgsrc : '/logo/chocolatebubble.png'
             }
         ]
     },
