@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Form, Input } from 'antd';
+import { Button, Form, Input,Select } from 'antd';
 
 const { TextArea } = Input;
 
@@ -47,6 +47,24 @@ const MenuSetUp = () => {
                 </Form.Item>
 
                 <Form.Item
+                label="Category"
+                name="category"
+                rules={[
+                    {
+                    required: true,
+                    message: 'Please select category!',
+                    },
+                ]}
+                >
+                    <Select 
+                        style={{ color:'white' }}
+                        placeholder="Category"
+                    >
+                         {category.map((v,k) => <option key={k} value={v?.categoryId} label={v?.categoryName}>{v?.categoryName}</option>)}
+                    </Select>
+                </Form.Item>
+
+                <Form.Item
                 label="Price"
                 name="price"
                 rules={[
@@ -85,3 +103,28 @@ const MenuSetUp = () => {
 }
 
 export default MenuSetUp;
+
+// can replace to use category list form api
+const category = [
+    {
+        categoryId : 1,
+        categoryName : 'Yogurt'
+    },
+    {
+        categoryId : 2,
+        categoryName : 'Bubble Tea'
+    },
+    {
+        categoryId : 3,
+        categoryName : 'Coffee'
+    },
+    {
+        categoryId : 4,
+        categoryName : 'Smoothie'
+    },
+    {
+        categoryId : 5,
+        categoryName : 'Soda'
+    },
+    
+]

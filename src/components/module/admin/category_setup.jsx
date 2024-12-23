@@ -1,10 +1,12 @@
 import React from "react";
 import { Button, Form, Input } from 'antd';
 
+
+//category save component 
 const CategorySetup = () => {
 
     const onFinish = (values) => {
-        console.log('Success:', values);
+        console.log("Category Value ", values) // functions to save item category 
       };
       const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
