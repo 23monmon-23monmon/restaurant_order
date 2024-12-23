@@ -4,9 +4,10 @@ import { Button, Form, Input } from 'antd';
 
 //category save component 
 const CategorySetup = () => {
-
+    const [form] = Form.useForm();
     const onFinish = (values) => {
         console.log("Category Value ", values) // functions to save item category 
+        form.resetFields();
       };
       const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
@@ -16,6 +17,7 @@ const CategorySetup = () => {
         <div className="pt-5 px-5 pb-5 bg-[#a8b833]" >
             
             <Form
+                form={form}
                 name="basic"
                 labelCol={{
                 span: 8,
@@ -44,7 +46,7 @@ const CategorySetup = () => {
                     },
                 ]}
                 >
-                <Input style={{height : '40px', maxWidth: '400px', color : 'white'}}/>
+                <Input style={{height : '40px', maxWidth: '400px'}}/>
                 </Form.Item>
 
                 <Form.Item label={null}>

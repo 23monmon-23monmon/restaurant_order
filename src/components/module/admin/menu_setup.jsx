@@ -2,11 +2,16 @@ import React from "react";
 import { Button, Form, Input,Select } from 'antd';
 
 const { TextArea } = Input;
+const { Option } = Select;
 
 const MenuSetUp = () => {
 
+    const [form] = Form.useForm();
+
     const onFinish = (values) => {
-        console.log('Success:', values);
+        
+        form.resetFields();
+        console.log('MenuItem', values); // save item list    
       };
       const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
@@ -15,6 +20,7 @@ const MenuSetUp = () => {
     return(
         <div className="pt-5 px-5 pb-5 bg-[#a8b833]" >
             <Form
+                form={form} 
                 name="basic"
                 labelCol={{
                 span: 8,
@@ -34,7 +40,7 @@ const MenuSetUp = () => {
                 autoComplete="off"
             >
                 <Form.Item
-                label="Item Name"
+                label={<span style={{color : 'white'}}>Item Name</span>}
                 name="itemName"
                 rules={[
                     {
@@ -47,7 +53,7 @@ const MenuSetUp = () => {
                 </Form.Item>
 
                 <Form.Item
-                label="Category"
+                label={<span style={{color : 'white'}}>Category</span>}
                 name="category"
                 rules={[
                     {
@@ -60,12 +66,12 @@ const MenuSetUp = () => {
                         style={{ color:'white' }}
                         placeholder="Category"
                     >
-                         {category.map((v,k) => <option key={k} value={v?.categoryId} label={v?.categoryName}>{v?.categoryName}</option>)}
+                         {category.map((v,k) => <Option key={k} value={v?.categoryId} label={v?.categoryName}>{v?.categoryName}</Option>)}
                     </Select>
                 </Form.Item>
 
                 <Form.Item
-                label="Price"
+                label={<span style={{color : 'white'}}>Price</span>}
                 name="price"
                 rules={[
                     {
@@ -74,11 +80,11 @@ const MenuSetUp = () => {
                     },
                 ]}
                 >
-                    <Input style={{height : '40px'}}/>
+                    <Input type="number" style={{height : '40px'}}/>
                 </Form.Item>
                 <Form.Item
-                label="Note"
-                name="note"
+                label={<span style={{color : 'white'}}>Remark</span>}
+                name="remark"
                 
                 >
                     <TextArea
